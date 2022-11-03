@@ -89,6 +89,5 @@ public class AddressComputer {
         System.out.println("Enter the subnet mast:");
         addressComputer.setSubnetMask(scanner.nextLine());
         addressComputer.printNetworkInfo();
-
     }
 }
