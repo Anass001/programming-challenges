@@ -31,7 +31,20 @@ public class SortingAlgorithms {
     }
 
     public static void selection(int[] list) {
-
+        int min;
+        for (int i = 0; i < list.length - 1; i++) {
+            min = i;
+            for (int j = i + 1; j < list.length; j++) {
+                if (list[j] < list[min]) {
+                    min = j;
+                }
+            }
+            if (min != i) {
+                int tmp = list[min];
+                list[min] = list[i];
+                list[i] = tmp;
+            }
+        }
     }
 
     public static void print(int[] list) {
@@ -42,7 +55,7 @@ public class SortingAlgorithms {
 
     public static void main(String[] args) {
         int[] list = {4, 3, 2, 10, 12, 1, 5, 6};
-        SortingAlgorithms.insertion(list);
+        SortingAlgorithms.selection(list);
         SortingAlgorithms.print(list);
 
     }
