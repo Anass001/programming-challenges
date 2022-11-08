@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="784de71a-f12f-497b-9957-c5344f6554d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/BmiCalculator/BmiCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SortingAlgorithms.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AddressComputer/AddressComputer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AddressComputer/AddressComputer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +73,11 @@
       <option name="presentableId" value="Default" />
       <updated>1667428643080</updated>
       <workItem from="1667428644773" duration="687000" />
-      <workItem from="1667478514234" duration="2042000" />
+      <workItem from="1667478514234" duration="2677000" />
+      <workItem from="1667559105537" duration="16000" />
+      <workItem from="1667674098479" duration="626000" />
+      <workItem from="1667828392494" duration="41000" />
+      <workItem from="1667932764479" duration="189000" />
     </task>
     <servers />
   </component>
