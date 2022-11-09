@@ -14,19 +14,14 @@ public class SortingAlgorithms {
         }
     }
 
-    //needs optimizing
     public static void insertion(int[] list) {
+        int j;
         for (int i = 1; i < list.length; i++) {
-            for (int j = 0; j < i; j++) {
-                if (list[i] < list[j]) {
-                    for (int k = i; k > j; k--) {
-                        int tmp = list[k];
-                        list[k] = list[k - 1];
-                        list[k - 1] = tmp;
-                    }
-                    break;
-                }
+            int tmp = list[i];
+            for (j = i - 1; j >= 0 && list[j] > tmp; j--) {
+                list[j + 1] = list[j];
             }
+            list[j + 1] = tmp;
         }
     }
 
@@ -55,8 +50,7 @@ public class SortingAlgorithms {
 
     public static void main(String[] args) {
         int[] list = {4, 3, 2, 10, 12, 1, 5, 6};
-        SortingAlgorithms.selection(list);
+        SortingAlgorithms.insertion(list);
         SortingAlgorithms.print(list);
-
     }
 }
