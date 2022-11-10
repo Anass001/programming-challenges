@@ -1,8 +1,11 @@
+package SortingAlgorithms;
+
 import java.io.IOException;
 
 public class SortingAlgorithms {
 
     public static void bubble(int[] list) {
+        ListDrawer drawer = ListDrawer.create();
         for (int i = 0; i < list.length; i++) {
             for (int j = 0; j < list.length - 1; j++) {
                 if (list[j] > list[j + 1]) {
@@ -11,7 +14,13 @@ public class SortingAlgorithms {
                     list[j + 1] = tmp;
                 }
             }
+            try {
+                drawer.drawList(list);
+            } catch (IOException | InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
+        drawer.endTerminal();
     }
 
     public static void insertion(int[] list) {
@@ -48,9 +57,11 @@ public class SortingAlgorithms {
         }
     }
 
+
+
     public static void main(String[] args) {
         int[] list = {4, 3, 2, 10, 12, 1, 5, 6};
-        SortingAlgorithms.insertion(list);
+        SortingAlgorithms.bubble(list);
         SortingAlgorithms.print(list);
     }
 }
