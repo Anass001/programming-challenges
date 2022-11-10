@@ -24,6 +24,7 @@ public class SortingAlgorithms {
     }
 
     public static void insertion(int[] list) {
+        ListDrawer drawer = ListDrawer.create();
         int j;
         for (int i = 1; i < list.length; i++) {
             int tmp = list[i];
@@ -31,10 +32,17 @@ public class SortingAlgorithms {
                 list[j + 1] = list[j];
             }
             list[j + 1] = tmp;
+            try {
+                drawer.drawList(list);
+            } catch (IOException | InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
+        drawer.endTerminal();
     }
 
     public static void selection(int[] list) {
+        ListDrawer drawer = ListDrawer.create();
         int min;
         for (int i = 0; i < list.length - 1; i++) {
             min = i;
@@ -48,7 +56,13 @@ public class SortingAlgorithms {
                 list[min] = list[i];
                 list[i] = tmp;
             }
+            try {
+                drawer.drawList(list);
+            } catch (IOException | InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
+        drawer.endTerminal();
     }
 
     public static void print(int[] list) {
@@ -58,10 +72,9 @@ public class SortingAlgorithms {
     }
 
 
-
     public static void main(String[] args) {
         int[] list = {4, 3, 2, 10, 12, 1, 5, 6};
-        SortingAlgorithms.bubble(list);
+        SortingAlgorithms.selection(list);
         SortingAlgorithms.print(list);
     }
 }
